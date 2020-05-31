@@ -11,7 +11,7 @@ pipeline{
             steps{
                 
                 sh """
-                docker build -t "myjavawebapp:base" .
+                docker build -t "javawebapp:base" .
                 """
                 
             }
