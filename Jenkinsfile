@@ -9,9 +9,11 @@ pipeline{
         }
         stage('Building my base image'){
             steps{
-                script{
-                    sh "docker build -t "myjavawebapp:base" ."
-                }
+                
+                sh """
+                docker build -t "myjavawebapp:base" .
+                """
+                
             }
 
         }
