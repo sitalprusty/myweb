@@ -7,11 +7,11 @@ pipeline{
             }
 
         }
-        stage('Building my base image'){
+        stage('Building my final image'){
             steps{
                 
                 sh """
-                docker build -t "javawebapp:base" .
+                docker build -t "myjavawebapp" .
                 """
                 
             }
