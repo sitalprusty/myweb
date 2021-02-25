@@ -1,4 +1,4 @@
-FROM javawebapp:base
+FROM baseimage
 EXPOSE 8080
 WORKDIR /opt/myapplication/
 COPY . .
