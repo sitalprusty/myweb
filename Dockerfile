@@ -1,6 +1,6 @@
-FROM baseimage
-EXPOSE 8080
-WORKDIR /opt/myapplication/
-COPY . .
-RUN mvn clean install && cp ./target/myweb-*.war /opt/tomcat/webapps/myapp.war
+FROM tomcat
+COPY myweb/target/myweb*.war /opt/tomcat/webapps/app.war
+EXPOSE 8083
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
+
+
